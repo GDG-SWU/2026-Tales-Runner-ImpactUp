@@ -4,9 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor //기본생성자 자동 생성
-public class UserRequestDto {
+@NoArgsConstructor
+public class LoginRequestDto {
     private String email;
-    private String nickname;
     private String password;
 }
