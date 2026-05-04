@@ -13,3 +13,6 @@ spring:
       hibernate:
         format_sql: true
     database-platform: org.hibernate.dialect.MySQLDialect
+
+jwt:
+  secret: 70643aa944aee3a7b8696475602ed3f08d475dc76de6c8e081af3819e4e85f2b
