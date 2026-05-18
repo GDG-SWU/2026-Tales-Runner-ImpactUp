@@ -1,4 +1,4 @@
-package com.example.dual_tales.api.story.dto;
+package com.example.dual_tales.global.infrastructure.ai;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -7,35 +7,40 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-//AI가 최종적으로 만들어서 던져줄 동화 DTO
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class StoryCreateRequestDto {
-    private Long draftId;
+@AllArgsConstructor
+public class FinalStoryResponse {
+
     private String title;
 
     @JsonProperty("cover_image_url")
-    private String cover_image_url;
+    private String coverImageUrl;
+
     @JsonProperty("target_lang_code")
     private String targetLangCode;
+
     @JsonProperty("target_age")
     private int targetAge;
+
     @JsonProperty("page_count")
     private int pageCount;
-    @JsonProperty("contents")
-    private List<ContentDto> contents;
+
+    private List<PageContent> pages;
 
     @Getter
-    @AllArgsConstructor
     @NoArgsConstructor
-    public static class ContentDto {
+    @AllArgsConstructor
+    public static class PageContent {
         private int sequence;
+
         @JsonProperty("content_ko")
-        private String content_ko;
+        private String contentKo;
+
         @JsonProperty("content_foreign")
-        private String content_foreign;
+        private String contentForeign;
+
         @JsonProperty("image_url")
-        private String image_url;
+        private String imageUrl;
     }
 }
