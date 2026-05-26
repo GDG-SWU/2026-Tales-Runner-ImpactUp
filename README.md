@@ -1,5 +1,3 @@
----
-
 # 📚 Dual Tales - Backend Service
 
 > **AI 기반 다문화 가정을 위한 이중언어 동화 제작 서비스**
