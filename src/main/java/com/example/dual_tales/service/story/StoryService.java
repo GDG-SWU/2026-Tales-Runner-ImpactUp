@@ -32,6 +32,7 @@ public class StoryService {
         Story story = Story.builder()
                 .user(user)
                 .title(requestDto.getTitle())
+                .cover_image(requestDto.getCover_image_url())
                 .targetLangCode(requestDto.getTargetLangCode())
                 .targetAge(requestDto.getTargetAge())
                 .page_count(requestDto.getPageCount())
